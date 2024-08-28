@@ -14,6 +14,7 @@ const arr = ["1","2","3","4"];
 const arr1 = arr.join(" * ");
 console.log(arr1);
 
+
 const ages = [32, 33, 16, 40];
 function checkAdult(x) {
   if(x >= 18){
@@ -22,21 +23,17 @@ function checkAdult(x) {
       return false;
   }
 }
-
-const arr2 = [];
-
-
-for (let i = 0; i<ages.length; i++){
-    console.log(ages[i]);
-    const hello = checkAdult(ages[i]);
-    if(hello == true){
-        // console.log("yes");
-        arr2.push(ages[i]);
-    } else {
-        console.log("no");
-    }
-}
-console.log(arr2);
 const result = ages.filter(checkAdult);
+const result1 = ages.find(checkAdult);
 console.log(result);
+console.log(result1);
+
+const car = ["BMW", "Ferrari", "Range rover", "Audi"];
+const isFerrariIncluded = car.includes("Ferrari");
+const isNissanIncluded = car.includes("Nissan");
+const isFerrariIncludedInPosition = car.includes("Ferrari", 1);
+console.log(isFerrariIncluded);
+console.log(isNissanIncluded);
+console.log(isFerrariIncludedInPosition);
+
 
