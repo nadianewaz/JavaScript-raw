@@ -57,7 +57,7 @@ console.log(isFerrariIncludedInPosition);
 // slice 
 const resultOfSliceMethod = car.slice(1, 3);
 console.log(resultOfSliceMethod);
-// output: ['Ferrari', 'Range rover']   Slice mthod excludes the last element
+// output: ['Ferrari', 'Range rover']   Slice method excludes the last element
 
 
 const resultOfSliceMethod1 = car.slice(-4, -1);
@@ -96,7 +96,20 @@ function myFunction (number){
     return number + 10;
 }
 console.log(newArr);
-// output: (4) [75, 54, 66, 80] 
+// output: (4) [75, 54, 66, 80]
+
+
+// reduce
+const arrReduce = [4, 9, 5, 2];
+
+
+function addition (x1, x2){
+  return x1 + x2;
+}
+
+const newArrReduce = arrReduce.reduce(addition);
+console.log("Result of reduce :", newArrReduce);
+
 
 
 
@@ -141,3 +154,37 @@ console.log(value1);
 const myFunctions = (a, b) => a * b;
 const resultOfArrowFunc = myFunctions(4, 5);
 console.log(resultOfArrowFunc);
+
+
+// Looping arr element
+
+const fruitsAll = ["Banana", "Orange", "Apple", "Mango"];
+
+for (let i = 0; i<fruitsAll.length; i++){
+  console.log(fruitsAll[i]);
+
+}
+// output :
+// Banana
+// Orange
+// Apple
+// Mango
+
+// callback fun 
+function mainFunction(callback) {
+  console.log("Performing operation");
+  
+  setTimeout(function() {
+    callback("Operation complete");
+  }, 1000);
+}
+
+function callbackFunction(result) {
+  console.log("Result: " + result);
+}
+
+mainFunction(callbackFunction);
+
+// output:
+// Performing operation
+// Result: Operation complete
